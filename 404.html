@@ -20,15 +20,15 @@
 
     <script>
         function getCurrentURL () {
-            return window.location.pathname
-        }
+            return window.location.pathname;
+        };
 
         if (getCurrentURL() == "/404.html") {
             document.getElementById("heading").innerHTML = "This is the 404 page. Pretty boring here :)"
-            document.getElementById("body").classList.add("visually-hidden")
+            document.getElementById("body").classList.add("visually-hidden");
         } else {
-            document.getElementById("heading").innerHTML = "Error 404 - Cannot GET " + currentURL
-        }
+            document.getElementById("heading").innerHTML = "Error 404 - Cannot GET " + getCurrentURL();
+        };
 
     </script>
 </body>
