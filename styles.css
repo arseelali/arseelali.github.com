@@ -3,9 +3,13 @@
   --font-body: "Lora", serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
-  color: var(--primary-color); /* Example primary color variable */
+  color: var(--primary-color);
   padding: 0;
   margin: 0;
 }
@@ -14,7 +18,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-heading);
-  color: var(--primary-color); /* Example primary color variable */
+  color: var(--primary-color);
 }
 
 .hero {
@@ -23,7 +27,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #000, #333); /* Example gradient */
+  background: linear-gradient(to right, #000, #333);
   color: #fff;
   text-align: center;
   position: relative;
@@ -43,8 +47,8 @@ p {
 
 #about {
   padding: 4rem 2rem;
-  background: #f4f4f4; /* Light gray background */
-  color: #333; /* Dark text */
+  background: #f4f4f4;
+  color: #333;
   text-align: center;
 }
 
@@ -61,8 +65,8 @@ p {
 
 #skills {
   padding: 4rem 2rem;
-  background: #f4f4f4; /* Light gray background */
-  color: #333; /* Dark text */
+  background: #f4f4f4;
+  color: #333;
   text-align: center;
 }
 
@@ -84,7 +88,7 @@ p {
 }
 
 .skill-bar {
-  background: #ddd; /* Light gray background */
+  background: #ddd;
   border-radius: 5px;
   overflow: hidden;
   height: 20px;
@@ -92,7 +96,7 @@ p {
 }
 
 .skill-progress {
-  background: #000; /* Black progress */
+  background: #000;
   height: 100%;
   transition: width 0.5s ease;
 }
@@ -115,17 +119,17 @@ p {
 
 .project-item {
   background: #fff;
-  padding: 1.5rem; /* Increased padding */
+  padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   width: calc(33.333% - 2rem);
-  min-width: 250px; /* Adjusted minimum width */
+  min-width: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
 }
 
 .proj-h2 {
@@ -161,8 +165,8 @@ p {
 
 #contact {
   padding: 4rem 2rem;
-  background: #f4f4f4; /* Light gray background */
-  color: #333; /* Dark text */
+  background: #f4f4f4;
+  color: #333;
   text-align: center;
 }
 
