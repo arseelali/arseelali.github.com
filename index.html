@@ -1,91 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arseel Ali's portfolio showcasing projects and coding skills.">
+    <meta name="keywords" content="portfolio, web development, coding, projects">
+    <meta name="author" content="Arseel Ali">
+    <meta property="og:title" content="Arseel Ali's Portfolio">
+    <meta property="og:description" content="Explore my projects and skills.">
+    <meta property="og:url" content="https://arseelali.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lora:wght@400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Arseel Ali</title>
-  </head>
-  <body>
-    <div class="section header" id="header">
-      <a href="mailto:aliarseel1@gmail.com" class="title-link"
-        ><h1 class="title">Arseel Ali</h1></a
-      >
-      <h2 class="description">{Web Developer}</h2>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JVXPCDGGYJ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-JVXPCDGGYJ');
+</script>
+
+<body>
+    <div class="hero" id="hero">
+        <h1>Arseel Ali</h1>
+        <p>Web Developer & Programmer</p>
+        <p>Using modern tools to create modern designs</p>
     </div>
 
-    <div class="section about-me" id="about-me">
-      <img
-        src="./assets/arseel.jpg"
-        alt="A profile photo of Arseel"
-        class="arseel-pfp"
-      />
-      <p class="howdy">Howdy!</p>
-      <p class="bio">I’m Arseel, a freshman at Austin High School (AHS) in Texas. Growing up, I loved computers and the overall process of web development, from creating the foundational structure, styling it to perfection, adding interactivity, and inevitably squashing those pesky bugs. In fact, I made this website too, <span class="bold">from scratch!</span> When I’m not coding, you can find me exploring new technologies, working on personal projects, or diving into other interests and hobbies. I’m always eager to learn and grow, aiming to create innovative and user-friendly web experiences. </p>
-    </div>
+    <div class="separator white-area"></div>
 
-    <div class="section skills" id="skills">
-        <h2>Skills</h2>
-        <div class="card">
-            <h3>Web Development and IT Passion</h3>
-            <img src="./assets/tag.png" alt="HTML Tag">
-            <p>I have always been passionate about the process of Web Development and the overall IT field. I made my first, very basic website at the ripe age of 9 years old. I took this as my first major achievement and ventured on to become who I am today. Fascinated when I cracked open my first computer at the age of 10, I never lost interest in the way these complex machines work and I still wonder to this day, although a little more knowledgeable. Ever since then I just kept on exploring and finding new ways to expand my knowledge in this fascinating field and will continue exploring. </p>
-        </div>
-        <div class="card">
-            <h3>Time Managment and Efficiency</h3>
-            <img src="./assets/clock.png" alt="Clock Graphic">
-            <p>As a High School student, I am always slammed with things like homework, chores, and personal projects and I have a hard time managing my time and setting priorities. Now, I have some tools that help me manage my time and boost my efficiency. I like to use things like planners, to-do lists, priority lists, timers to clock my working time, and more. These help me stay on track time-wise and also keep me in check from other distractions.</p>
-        </div>
-    </div>
+    <section id="about" class="white-area">
+        <h2>About Me</h2>
+        <p>I'm a high school freshman with a passion for coding and web development. I love creating projects that
+            combine creativity with technology.</p>
+    </section>
 
-    <div class="section portfolio" id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="port-item-container">
-            <div class="port-item">
-                <h3><a href="https://arseelali.com/move-it/" target="_blank">Move It</a></h3>
-                <p>A landing page for a moving company made with HTML, CSS and Bootstrap</p>
+    <section id="skills" class="white-area">
+        <h2 class="prog-h2">My Skills</h2>
+        <div class="skill-list">
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 65%;"></div>
+                </div>
             </div>
-            <div class="port-item">
-                <h3><a href="https://arseelali.com/internet-quiz/" target="_blank">Internet Quiz</a></h3>
-                <p>A quick, 4 question quiz on basic internet knowledge</p>
-            </div>
-            <div class="port-item">
-                <h3><a href="https://arseelali.com/tindog/" target="_blank">Tindog</a></h3>
-                <p>A landing page for a dating app for dogs made with HTML, CSS, and Bootstrap</p>
+            <div class="skill-item">
+                <h3>CSS</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section contact" id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Feel free to <a href="mailto:aliarseel1@gmail.com" class="bold">contact me</a> with any questions, concerns, or feedback! I look forward to hearing from you. Bye for now!👋</p>
+    <section class="projects white-area" id="projects">
+        <h2 class="proj-h2">My Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>Project Title 1</h3>
+                <p>A brief description of the project. This could include technologies used, what the project does, and
+                    why it’s cool!</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-item">
+                <h3>Project Title 2</h3>
+                <p>A brief description of the project. This could include technologies used, what the project does, and
+                    why it’s cool!</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-item">
+                <h3>Project Title 3</h3>
+                <p>A brief description of the project. This could include technologies used, what the project does, and
+                    why it’s cool!</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-item">
+                <h3>Project Title 4</h3>
+                <p>A brief description of the project. This could include technologies used, what the project does, and
+                    why it’s cool!</p>
+                <a href="#">View Project</a>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="contact" class="white-area">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out via email or connect with me on social media.</p>
+        <a href="mailto:arseel@example.com">Email Me</a>
+    </section>
 
     <footer>
-        &copy; 2024 Arseel Ali
+        <div class="footer-content">
+            <p>&copy; 2024 Arseel Ali. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://twitter.com/htx_arseel" target="_blank" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="https://github.com/arseelali1" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/arseelali" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        console.log("%c" + "© 2024 Arseel Ali", "color: #A5ABDC; font-size: 40px; font-weight: bold;");
-        console.log("%c" + "If you find a bug, have feedback, or have any questions, feel free to email: aliarseel1@gmail.com", "color: #A5ABDC; font-size: 25px; font-weight: bold;");
-    </script>
-  </body>
-</html>
+    <script src="script.js"></script>
+</body>
 
-<!-- Inspiration from  https://www.mcchill.in/ -->
+</html>
