@@ -89,7 +89,7 @@ p {
 
 .skill-bar {
   background: #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: hidden;
   height: 20px;
   width: 100%;
