@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    width: 40%;
+}
+
+#iframe {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
