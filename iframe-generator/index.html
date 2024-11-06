@@ -50,7 +50,7 @@
       <button id="disagree">No</button>
     </div>
 
-    <div id="rejectedMsg" class="hidden">Terms rejected</div>
+    <div id="rejectedMsg" class="hidden"><p>Terms rejected</p><p>Did you mean yes?</p><button id="back">Go Back</button></div>
 
     <div id="app" class="hidden">
       <h1>Instructions:</h1>
@@ -131,6 +131,10 @@
             document.querySelector("#result").classList.remove("hidden");
             document.querySelector("#iframe").innerText = prefix + id + suffix;
         })
+      }
+      
+      document.querySelector("#back").addEventListener("click", function (e) {
+        location.reload();
       }
     </script>
   </body>
