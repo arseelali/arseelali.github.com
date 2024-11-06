@@ -17,8 +17,8 @@ print("4. No Warranty")
 print("\tThis program is provided “as is,” with no guarantees of performance or security.\n")
 print("By continuing and/or modifying this program, you acknowledge and accept these terms. If you do not agree, do not use the program.\n")
 print("These terms and conditions can be found at https://arseelali.com/iframe-generator/\n")
-toc = input("Do you agree to these terms and conditions? {y/n}: ")
-if toc == "y" or toc == "Y":
+toc = input("Do you agree to these terms and conditions? {y/n}: ").upper()
+if toc == "Y" or toc == "YES":
     print()
 else:
     print("Exiting...")
