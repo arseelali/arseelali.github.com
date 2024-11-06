@@ -16,7 +16,7 @@ print("\tThe author is not responsible for any consequences from using this prog
 print("4. No Warranty")
 print("\tThis program is provided “as is,” with no guarantees of performance or security.\n")
 print("By continuing and/or modifying this program, you acknowledge and accept these terms. If you do not agree, do not use the program.\n")
-print("These terms and conditions can be found at https://arseelali.com/other/iframe-generator-terms.html\n")
+print("These terms and conditions can be found at https://arseelali.com/iframe-generator/\n")
 toc = input("Do you agree to these terms and conditions? {y/n}: ")
 if toc == "y" or toc == "Y":
     print()
