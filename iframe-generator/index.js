@@ -23,6 +23,7 @@ if (localStorage.getItem("name") === null) {
 
   localStorage.setItem("name", name);
   document.querySelector("#name").innerHTML = name;
+  addName(name);
 } else if (localStorage.getItem("name") !== null) {
   document.querySelector("#name").innerHTML = localStorage.getItem("name");
 }
