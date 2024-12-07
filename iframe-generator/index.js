@@ -59,6 +59,11 @@ function changeName() {
   addName(name);
 }
 
+function clearLocalStorage() {
+  localStorage.clear();
+  console.log("Reset complete");
+}
+
 async function addName(name) {
   const { data, error } = await db.from("names").insert([{ name }]);
   if (error) {
