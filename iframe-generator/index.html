@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/umd/supabase.js"></script>
+    <title>YouTube iFrame Generator</title>
+</head>
+
+<body>
+    <div id="welcome" class="hidden">
+        <h1>Welcome <span id="name">User</span>!</h1>
+    </div>
+
+    <div class="tac" id="tac">
+        <h1>YouTube iFrame Generator</h1>
+        <h2>Terms and Conditions</h2>
+        <p>By using this program, you agree to the following:</p>
+        <ol>
+            <li>Educational Use Only
+                <p>This program is for educational purposes only. Do not use it to bypass school or network
+                    restrictions.</p>
+            </li>
+            <li>Compliance with Rules
+                <p>You agree to follow your school's policies, including the FBISD Code of Conduct. Any misuse of this
+                    program is your responsibility.</p>
+            </li>
+            <li>Assumption of Risk
+                <p>The author is not responsible for any consequences from using this program, including disciplinary
+                    actions or legal issues. You use this program at your own risk.</p>
+            </li>
+            <li>No Warranty
+                <p>This program is provided “as is,” with no guarantees of performance or security.</p>
+            </li>
+        </ol>
+        <p>By continuing and/or modifying this program, you acknowledge and accept these terms. If you do not agree, do
+            not use the program.</p>
+        <p>Do you agree to these terms?</p>
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember my choice</label> <br />
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+    </div>
+
+    <div class="denytac hidden" id="denytac">
+        <p>You have denied the Terms and Conditions.</p>
+        <button onclick="window.location = '/';">Go Back</button>
+    </div>
+
+    <div class="app hidden" id="app">
+        <h2>Instructions</h2>
+        <ol>
+            <li>Enter a YouTube link in the following format:
+                <p>https://www.youtube.com/watch?v=XXXXXXXXXXX</p>
+                <p>If your link does not have https://www. at the beginning, please add it.</p>
+            </li>
+            <li>Paste the link and click 'Generate.' To use this iFrame, go to Schoology, right click and click
+                "Inspect" on any blank space on the website.</li>
+            <li>In the opened panel, look for an element. When you hover on it, that element on the page should turn
+                blue. Now right click on that element.</li>
+            <li>Then click Edit as HTML. Select everything in the box and delete it.</li>
+            <li>Paste the code provided and click the X icon at the top right of the panel.</li>
+        </ol>
+        <br>
+        <form id="genForm">
+            <label for="link">Enter a YouTube link in the above format:</label>
+            <input type="text" id="link">
+            <input type="submit" id="submit" value="Generate">
+        </form>
+        <br>
+        <div class="result hidden">
+            <p id="result">Unable to generate iFrame. Try again, or check console for details.</p>
+        </div>
+        <div class="download">
+            <p>To download the offline Python version of this application, click <a
+                    href="./iframe-generator.py">here</a>.</p>
+            <p>Note: Python3 is required to run the above application.</p>
+        </div>
+    </div>
+
+    <script src="index.js" defer></script>
+</body>
+
+</html>
