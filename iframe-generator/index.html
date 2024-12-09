@@ -81,12 +81,14 @@
         <br>
         <form id="genForm">
             <label for="link">Enter a YouTube link in the above format:</label>
-            <input type="text" id="link">
+            <input type="text" id="link" autofocus>
             <input type="submit" id="submit" value="Generate">
         </form>
         <br>
-        <div class="result hidden">
-            <p id="result">Unable to generate iFrame. Try again, or check console for details.</p>
+        <div class="result hidden" id="resultContainer">
+            <textarea id="result" readonly style="width: 680px; height: 80px;">Unable to generate iFrame. Try again, or check console for details.</textarea>
+            <br>
+            <button id="copy">Click to copy</button>
         </div>
         <div class="download">
             <p>To download the offline Python version of this application, click <a

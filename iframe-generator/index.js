@@ -1,19 +1,35 @@
 const yes = document.querySelector("#yes");
 const no = document.querySelector("#no");
+const form = document.querySelector("#genForm");
+const result = document.querySelector("#result");
+const link = document.querySelector("#link");
+const resultContainer = document.querySelector("#resultContainer");
+const copy = document.querySelector("#copy");
 
 const db = supabase.createClient(
   "https://lybcuakcinaeepnpbard.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5YmN1YWtjaW5hZWVwbnBiYXJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM1OTc0MzYsImV4cCI6MjA0OTE3MzQzNn0.Qqumx1jo5zHsXfDjyV6fDvIcdiZ0CawcClxWh1q9x1o"
 );
 
-const encoderKey = "x758166x";
-
-console.log("Supabase ready:", supabase);
-
 const prefix =
   '<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/';
 const suffix =
   '?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"></iframe></div>';
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const videoId = link.value.split("v=")[1]?.slice(0, 11) || link.value.slice(-11);
+  const embedCode = prefix + videoId + suffix;
+  result.innerText = embedCode; 
+  resultContainer.classList.remove("hidden");
+});
+
+copy.addEventListener("click", () => {
+  const result = document.querySelector("#result");
+  result.select();
+  navigator.clipboard.writeText(result.value);
+  copy.innerText = "Copied!";
+})
 
 if (localStorage.getItem("name") === null) {
   let name = prompt("Enter Your Name: ");
