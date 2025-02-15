@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>UltraSurf Proxy Download</title>
+  </head>
+  <body>
+    <!-- Terms and Conditions -->
+    <div id="tac">
+      <h1>UltraSurf Proxy Download</h1>
+      <h2>What is UltraSurf?</h2>
+      <p>
+        UltraSurf is a free software that enables users to visit websites safely
+        and freely through a secure, encrypted tunnel.
+      </p>
+      <h2>Terms and Conditions</h2>
+      <p>By using this proxy, you agree to the following terms:</p>
+      <ol>
+        <li>
+          <h3>Third-Party Software Disclaimer</h3>
+          <p>
+            This proxy service, UltraSurf, is a third-party tool. I did not
+            create, modify, or distribute UltraSurf, nor am I affiliated with
+            UltraSurf in any way, shape, or form. Any use of this software is
+            entirely at your own discretion.
+          </p>
+        </li>
+        <li>
+          <h3>Educational Use Only</h3>
+          <p>
+            This proxy is provided for educational and informational purposes
+            only. It is not intended to be used to bypass school, work, or
+            network restrictions.
+          </p>
+        </li>
+        <li>
+          <h3>Compliance with Policies</h3>
+          <p>
+            You agree to follow all applicable rules, policies, and guidelines,
+            including but not limited to your school's acceptable use policy and
+            the FBISD Code of Conduct. Any misuse of this proxy is your sole
+            responsibility.
+          </p>
+        </li>
+        <li>
+          <h3>Assumption of Risk</h3>
+          <p>
+            The author of this document is not responsible for any consequences
+            resulting from the use of UltraSurf, including disciplinary action,
+            loss of access, or legal issues. You assume all risks associated
+            with using this software.
+          </p>
+        </li>
+        <li>
+          <h3>No Warranty or Liability</h3>
+          <p>
+            This proxy is provided “as is” without any guarantees of
+            functionality, security, or reliability. I make no claims regarding
+            its effectiveness or safety. Use at your own risk.
+          </p>
+        </li>
+      </ol>
+      <p>
+        By continuing to use UltraSurf, you acknowledge and accept these terms.
+        If you do not agree, do not use the proxy.
+      </p>
+      <p>Do you agree to the Terms and Conditions above?</p>
+      <input type="checkbox" id="remember" />
+      <label for="remember">Remember my choice</label><br /><br />
+      <button id="yes">Yes</button>
+      <button id="no">No</button>
+    </div>
+    <!-- Deny Page -->
+     <div id="deny" class="hidden">
+        <p>Denied</p>
+     </div>
+    <!-- Download Page -->
+    <div id="app" class="hidden">
+      <h1>UltraSurf Proxy Download</h1>
+      <h2>Download UltraSurf</h2>
+      <p>
+        Click the button below to download UltraSurf. This software will allow
+        you to access websites safely and freely through a secure, encrypted
+        tunnel.
+      </p>
+      <p id="downloading" class="hidden">Downloading...<br>If download has not started yet, please click <a href="./src/public/downloads/applications/software/ultrasurf/executeable/readonly/redist/UltraSurf.exe">here.</a></p>
+      <button id="download">Download UltraSurf</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
