@@ -30,5 +30,5 @@ no.addEventListener("click", () => {
 download.addEventListener("click", () => {
   downloading.classList.remove("hidden");
   window.location.href =
-    "./src/public/downloads/applications/software/ultrasurf/executeable/readonly/redist/UltraSurf.zip";
+    "./src/public/downloads/applications/software/ultrasurf/executeable/readonly/redist/extract-me.zip";
 });
