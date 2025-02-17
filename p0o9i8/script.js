@@ -28,7 +28,16 @@ no.addEventListener("click", () => {
 });
 
 download.addEventListener("click", () => {
-  downloading.classList.remove("hidden");
-  window.location.href =
-    "./src/public/downloads/applications/software/ultrasurf/executeable/readonly/redist/extract-me.zip";
+  const b64ep = "bW9vbmtuaWdodA==";
+  var password = prompt(
+    "Enter the password to download the file (Contact the site owner for the password)"
+  );
+  if (btoa(password) === b64ep) {
+    window.location.href =
+      "./src/public/downloads/applications/software/ultrasurf/executeable/readonly/redist/extract-me.zip";
+    downloading.classList.remove("hidden");
+    instructions.classList.remove("hidden");
+  } else {
+    alert("Incorrect password. Contact the site owner for the password.");
+  }
 });
