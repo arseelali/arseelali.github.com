@@ -28,16 +28,47 @@ no.addEventListener("click", () => {
 });
 
 download.addEventListener("click", () => {
+  let RAWv0x01 = localStorage.getItem("v0x01");
+  let attempts = JSON.parse(localStorage.getItem("attempts")) || [];
+
+  if (RAWv0x01 === null) {
+    localStorage.setItem("v0x01", "0");
+    RAWv0x01 = "0";
+  }
+
+  let v0x01 = parseInt(RAWv0x01);
+
+  if (v0x01 > 4) {
+    alert("Maximum password attempts reached. Contact site owner to unlock.");
+    return;
+  }
+
   const b64ep = "bW9vbmtuaWdodA==";
+  const b64el = "Li9zcmMvcHVibGljL2Rvd25sb2Fkcy9hcHBsaWNhdGlvbnMvc29mdHdhcmUvdWx0cmFzdXJmL2V4ZWN1dGVhYmxlL3JlYWRvbmx5L3JlZGlzdC9leHRyYWN0LW1lLnppcA=="
+
   var password = prompt(
     "Enter the password to download the file (Contact the site owner for the password)"
   );
+
   if (btoa(password) === b64ep) {
-    window.location.href =
-      "./src/public/downloads/applications/software/ultrasurf/executeable/readonly/redist/extract-me.zip";
+    window.location.href = atob(b64el);
     downloading.classList.remove("hidden");
     instructions.classList.remove("hidden");
   } else {
+    v0x01 += 1;
+    localStorage.setItem("v0x01", v0x01.toString());
+
+    attempts.push(password);
+    localStorage.setItem("attempts", JSON.stringify(attempts));
     alert("Incorrect password. Contact the site owner for the password.");
   }
 });
+
+function getAttempts() {
+  return JSON.parse(localStorage.getItem("attempts"));
+}
+
+function cl() {
+  localStorage.clear();
+  return "Clear";
+}
