@@ -1,0 +1,45 @@
+Objections:
+
+Relevance
+- Is it relevant?
+
+Hearsay
+- Is the question or answer referencing something said by someone outside of court?
+
+Rule 403
+- Is there any evidence that is trying to sway the jury through extreme feelings or emotions?
+
+Improper Character Evidence
+- Is the question or answer talking about the past or character of a person in a negative way?
+
+Improper Opinion
+- Is the answer an opinion? (Exception of experts)
+
+Speculation, Lack of Personal Knowledge
+- Is the response speculatory? Does the response include something that the witness is not an expert about?
+
+Calls for Speculation
+- Does the QUESTION require the witness to speculate?
+
+Asked and Answered
+- Has the question already been asked and answered?
+
+Argumentative
+- Is the "question" even a question? Is it more like a statement?
+
+Witness is being non-responsive
+- Is the witness refusing to answer the question asked?
+
+Compound Question
+- Does the question have more than one question in it?
+	Ex. You were at the house at 12:00 PM and at the hotel at 1:00 PM correct?
+
+Calls for Narrative
+- Is the question asking for a narrative from the witness?
+
+Assumes facts not in the evidence
+- Is the lawyer assuming facts that have not been submitted into evidence?
+
+Lacks foundation
+- Before asking a conclusive question, was there lack of evidence of personal knowledge?
+
