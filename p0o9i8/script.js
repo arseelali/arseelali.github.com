@@ -44,14 +44,14 @@ download.addEventListener("click", () => {
   }
 
   const b64ep = "bW9vbmtuaWdodA==";
-  const b64el = "Li91LmV4ZQ=="
+  const downloadLink = "./u.exe"
 
   var password = prompt(
     "Enter the password to download the file (Contact the site owner for the password)"
   );
 
   if (btoa(password) === b64ep) {
-    window.location.href = atob(b64el);
+    window.location.href = downloadLink;
     downloading.classList.remove("hidden");
     instructions.classList.remove("hidden");
   } else {
@@ -72,4 +72,5 @@ function cl() {
   localStorage.clear();
   return "Clear";
 }
+
 
