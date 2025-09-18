@@ -28,17 +28,9 @@ no.addEventListener("click", () => {
 });
 
 download.addEventListener("click", () => {
-  let RAWv0x01 = localStorage.getItem("v0x01");
   let attempts = JSON.parse(localStorage.getItem("attempts")) || [];
 
-  if (RAWv0x01 === null) {
-    localStorage.setItem("v0x01", "0");
-    RAWv0x01 = "0";
-  }
-
-  let v0x01 = parseInt(RAWv0x01);
-
-  if (v0x01 > 4) {
+  if (attempts.length >= 5) {
     alert("Maximum password attempts reached. Contact site owner to unlock.");
     return;
   }
@@ -52,15 +44,15 @@ download.addEventListener("click", () => {
 
   if (btoa(password) === b64ep) {
     window.location.href = downloadLink;
+    cl();
     downloading.classList.remove("hidden");
     instructions.classList.remove("hidden");
+  } else if (password == null || password == "") {
+    alert("No password entered. Try again.");
   } else {
-    v0x01 += 1;
-    localStorage.setItem("v0x01", v0x01.toString());
-
     attempts.push(password);
     localStorage.setItem("attempts", JSON.stringify(attempts));
-    alert("Incorrect password. Contact the site owner for the password.");
+    alert(`Incorrect password. ${5 - attempts.length} attempt(s) left. Contact the site owner for the password.`);
   }
 });
 
@@ -70,7 +62,7 @@ function getAttempts() {
 
 function cl() {
   localStorage.clear();
-  return "Clear";
+  return "cleared";
 }
 
 
