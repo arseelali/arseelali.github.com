@@ -4,6 +4,7 @@ const deny = document.querySelector("#deny");
 const remember = document.querySelector("#remember");
 const yes = document.querySelector("#yes");
 const no = document.querySelector("#no");
+const downloadComment = document.querySelector("#downloadComment");
 const download = document.querySelector("#download");
 const downloading = document.querySelector("#downloading");
 
@@ -35,24 +36,32 @@ download.addEventListener("click", () => {
     return;
   }
 
-  const b64ep = "bW9vbmtuaWdodA==";
-  const downloadLink = "./u.exe"
+  const b64ep = "OTAyMTA=";
+  const b64eDownloadLink = "Li91LmV4ZQ==";
 
   var password = prompt(
     "Enter the password to download the file (Contact the site owner for the password)"
   );
 
   if (btoa(password) === b64ep) {
-    window.location.href = downloadLink;
+    window.location.href = atob(b64eDownloadLink);
     cl();
+    downloadComment.classList.add("hidden");
+    download.classList.add("hidden");
     downloading.classList.remove("hidden");
-    instructions.classList.remove("hidden");
+    setTimeout(() => {
+      downloading.innerHTML = `If the download has not started yet, click <button class="buttonLink" onclick="window.location.href = atob('Li91LmV4ZQ==');">here</button>.`;
+    }, 3000);
   } else if (password == null || password == "") {
     alert("No password entered. Try again.");
   } else {
     attempts.push(password);
     localStorage.setItem("attempts", JSON.stringify(attempts));
-    alert(`Incorrect password. ${5 - attempts.length} attempt(s) left. Contact the site owner for the password.`);
+    alert(
+      `Incorrect password. ${
+        5 - attempts.length
+      } attempt(s) left. Contact the site owner for the password.`
+    );
   }
 });
 
@@ -64,5 +73,3 @@ function cl() {
   localStorage.clear();
   return "cleared";
 }
-
-
