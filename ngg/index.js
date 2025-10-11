@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Show download button
     downloadBtn.style.display = "inline-block";
     downloadBtn.onclick = () => {
-      window.location.href = "/downloads/NoGoGuardian.py";
+      window.location.href = "./downloads/NoGoGuardian.py";
     };
   });
 
@@ -45,3 +45,4 @@ document.addEventListener("DOMContentLoaded", () => {
     showMessage("You declined the Terms. Do not download the App.", "err");
   });
 });
+
