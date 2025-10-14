@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function getDownloadUrl() {
     try {
-        const password = alert("Enter the download password");
+        const password = prompt("Enter the download password");
         const response = await fetch(`${SERVER_URL}?password=${PASSWORD}`);
         const data = await response.json();
 
