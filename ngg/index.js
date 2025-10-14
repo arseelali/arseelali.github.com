@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const downloadBtn = document.getElementById("downloadBtn");
   const msg = document.getElementById("msg");
 
+  const SERVER_URL = "http://localhost:5000/web-auth";
+  const PASSWORD = "123";
+
   function showMessage(text, type = "ok") {
     msg.textContent = text;
     msg.className = "message " + (type === "err" ? "err" : "ok");
@@ -15,7 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
     msg.style.display = "none";
   }
 
-  agreeBtn.addEventListener("click", () => {
+  async function getDownloadUrl() {
+    try {
+        const response = await fetch(`${SERVER_URL}?password=${PASSWORD}`);
+        const data = await response.json();
+
+        if (response.ok && data.url) {
+            const decodedUrl = atob(data.url);
+            return decodedUrl;
+        } else {
+            showMessage("Authentication failed", "err");
+            return null;
+        }
+    } catch (error) {
+        showMessage("Error connecting to server:" + error.message, "err");
+        return null;
+    }
+  }
+
+  agreeBtn.addEventListener("click", async () => {
     clearMessage();
     const name = nameEl.value.trim();
     if (!name || name.length < 2) {
@@ -33,8 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Show download button
     downloadBtn.style.display = "inline-block";
-    downloadBtn.onclick = () => {
-      window.location.href = "./downloads/NoGoGuardian.py";
+    downloadBtn.onclick = async () => {
+      showMessage("Authenticating...", "ok");
+      const url = await getDownloadUrl();
+      if (url) {
+        showMessage("Download authorized! Redirecting...", "ok");
+        setTimeout(() => {
+          window.location.href = url;
+        }, 500);
+      }
     };
   });
 
@@ -45,4 +73,3 @@ document.addEventListener("DOMContentLoaded", () => {
     showMessage("You declined the Terms. Do not download the App.", "err");
   });
 });
-
