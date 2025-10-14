@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const downloadBtn = document.getElementById("downloadBtn");
   const msg = document.getElementById("msg");
 
-  const SERVER_URL = "http://aliarseel1.pythonanywhere.com/web-auth";
+  const SERVER_URL = "https://aliarseel1.pythonanywhere.com/web-auth";
   const PASSWORD = "123";
 
   function showMessage(text, type = "ok") {
@@ -73,4 +73,5 @@ document.addEventListener("DOMContentLoaded", () => {
     showMessage("You declined the Terms. Do not download the App.", "err");
   });
 });
+
 
