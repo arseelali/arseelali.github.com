@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const msg = document.getElementById("msg");
 
   const SERVER_URL = "https://aliarseel1.pythonanywhere.com/web-auth";
-  const PASSWORD = "123";
 
   function showMessage(text, type = "ok") {
     msg.textContent = text;
@@ -20,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function getDownloadUrl() {
     try {
+        const password = alert("Enter the download password");
         const response = await fetch(`${SERVER_URL}?password=${PASSWORD}`);
         const data = await response.json();
 
